@@ -2,7 +2,7 @@
 
 > **Estado 2026-10-06, 10:30:** los pasos 1 (MySQL local), 2 (PostgreSQL local) y 3 (YugabyteDB Aeon)
 > ya están hechos y verificados: 20 de 25 despliegues. En Aeon, SportsDB va con `-Colocado` por el
-> límite de 180 tablets del Sandbox. Falta el paso 4 (Codespace).
+> límite de 180 tablets del Sandbox. El paso 4 (Codespace) también: **25 de 25 completos**. Solo quedan las capturas para `evidencias/` (sección 5).
 
 Ya está hecho: los 10 scripts, MariaDB Docker completa (5/5) y los scripts PostgreSQL probados en
 PostgreSQL 18 y YugabyteDB, también desde el `psql` de Windows. Lo que sigue necesita **tu**

@@ -10,14 +10,14 @@ Codespace): 25 despliegues.
 
 | | MySQL local | PG local | YugabyteDB Aeon | MariaDB Docker | MariaDB Codespace |
 |---|:---:|:---:|:---:|:---:|:---:|
-| Harry Potter | ✅ | ✅ | ✅ | ✅ | ⏳ |
-| Marineros    | ✅ | ✅ | ✅ | ✅ | ⏳ |
-| Northwind    | ✅ | ✅ | ✅ | ✅ | ⏳ |
-| Chinook      | ✅ | ✅ | ✅ | ✅ | ⏳ |
-| SportsDB     | ✅ | ✅ | ✅ | ✅ | ⏳ |
+| Harry Potter | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Marineros    | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Northwind    | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Chinook      | ✅ | ✅ | ✅ | ✅ | ✅ |
+| SportsDB     | ✅ | ✅ | ✅ | ✅ | ✅ |
 
 ✅ = el script corrió de punta a punta, los conteos coinciden con las demás plataformas y la salida
-quedó en `evidencias/<plataforma>/`. ⏳ = pendiente.
+quedó en `evidencias/<plataforma>/`. **25 de 25 despliegues verificados.**
 
 **Validación previa del dialecto PostgreSQL.** Antes de desplegar en PostgreSQL local y en Aeon, los
 5 scripts PostgreSQL se probaron en dos contenedores de prueba: `postgres:18` (la misma versión que
