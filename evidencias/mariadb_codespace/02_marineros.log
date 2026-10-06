@@ -1,0 +1,20 @@
+# 02_marineros  |  MariaDB Codespace  |  2026-10-06T15:52:58+00:00  |  1s  |  codigo 0
++----------+-------+
+| tabla    | filas |
++----------+-------+
+| sailors  |    10 |
+| boats    |     4 |
+| reserves |    11 |
++----------+-------+
++---------+
+| sname   |
++---------+
+| Dustin  |
+| Horatio |
+| Lubber  |
++---------+
++--------+
+| sname  |
++--------+
+| Dustin |
++--------+

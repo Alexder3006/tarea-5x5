@@ -1,0 +1,16 @@
+# 04_chinook  |  MariaDB Codespace  |  2026-10-06T15:52:59+00:00  |  1s  |  codigo 0
++---------------+-------+
+| tabla         | filas |
++---------------+-------+
+| Album         |   347 |
+| Artist        |   275 |
+| Customer      |    59 |
+| Employee      |     8 |
+| Genre         |    25 |
+| Invoice       |   412 |
+| InvoiceLine   |  2240 |
+| MediaType     |     5 |
+| Playlist      |    18 |
+| PlaylistTrack |  8715 |
+| Track         |  3503 |
++---------------+-------+

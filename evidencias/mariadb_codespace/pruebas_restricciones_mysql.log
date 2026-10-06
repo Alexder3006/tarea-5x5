@@ -1,0 +1,82 @@
+# pruebas_restricciones_mysql  |  MariaDB Codespace  |  2026-10-06T15:53:07+00:00  |  0s  |  codigo 0
+ERROR 4025 (23000) at line 12: CONSTRAINT `ck_estudiantes_casa` failed for `harrypotter`.`estudiantes`
+ERROR 4025 (23000) at line 14: CONSTRAINT `ck_inscripciones_nota` failed for `harrypotter`.`inscripciones`
+ERROR 1062 (23000) at line 16: Duplicate entry '1-101' for key 'PRIMARY'
+ERROR 1452 (23000) at line 18: Cannot add or update a child row: a foreign key constraint fails (`harrypotter`.`cursos`, CONSTRAINT `fk_cursos_profesor` FOREIGN KEY (`profesor_id`) REFERENCES `profesores` (`profesor_id`))
+ERROR 1062 (23000) at line 20: Duplicate entry 'Severus Snape' for key 'nombre'
+ERROR 1451 (23000) at line 22: Cannot delete or update a parent row: a foreign key constraint fails (`harrypotter`.`cursos`, CONSTRAINT `fk_cursos_profesor` FOREIGN KEY (`profesor_id`) REFERENCES `profesores` (`profesor_id`))
+ERROR 1048 (23000) at line 24: Column 'profesor_id' cannot be null
+--------------
+INSERT INTO estudiantes VALUES (99, 'Ginny Weasley', 'Grifindor')
+--------------
+
+--------------
+INSERT INTO inscripciones VALUES (1, 103, 'Z')
+--------------
+
+--------------
+INSERT INTO inscripciones VALUES (1, 101, 'O')
+--------------
+
+--------------
+INSERT INTO cursos VALUES (199, 'Astronomy', 99)
+--------------
+
+--------------
+INSERT INTO profesores VALUES (7, 'Severus Snape')
+--------------
+
+--------------
+DELETE FROM profesores WHERE profesor_id = 1
+--------------
+
+--------------
+INSERT INTO cursos VALUES (198, 'Muggle Studies', NULL)
+--------------
+
+ERROR 4025 (23000) at line 29: CONSTRAINT `ck_sailors_rating` failed for `marineros`.`sailors`
+ERROR 4025 (23000) at line 31: CONSTRAINT `ck_sailors_age` failed for `marineros`.`sailors`
+ERROR 1062 (23000) at line 33: Duplicate entry '22-101-2023-07-10' for key 'PRIMARY'
+ERROR 1452 (23000) at line 35: Cannot add or update a child row: a foreign key constraint fails (`marineros`.`reserves`, CONSTRAINT `fk_reserves_sailor` FOREIGN KEY (`sid`) REFERENCES `sailors` (`sid`))
+ERROR 1452 (23000) at line 37: Cannot add or update a child row: a foreign key constraint fails (`marineros`.`reserves`, CONSTRAINT `fk_reserves_boat` FOREIGN KEY (`bid`) REFERENCES `boats` (`bid`))
+--------------
+INSERT INTO sailors VALUES (99, 'Popeye', 11, 40.0)
+--------------
+
+--------------
+INSERT INTO sailors VALUES (98, 'Bluto', 5, -3.0)
+--------------
+
+--------------
+INSERT INTO reserves VALUES (22, 101, '2023-07-10')
+--------------
+
+--------------
+INSERT INTO reserves VALUES (99, 101, '2024-01-01')
+--------------
+
+--------------
+INSERT INTO reserves VALUES (22, 999, '2024-01-01')
+--------------
+
+--------------
+SELECT 'harrypotter.estudiantes' AS tabla, COUNT(*) AS filas FROM harrypotter.estudiantes
+UNION ALL SELECT 'harrypotter.profesores',    COUNT(*) FROM harrypotter.profesores
+UNION ALL SELECT 'harrypotter.cursos',        COUNT(*) FROM harrypotter.cursos
+UNION ALL SELECT 'harrypotter.inscripciones', COUNT(*) FROM harrypotter.inscripciones
+UNION ALL SELECT 'marineros.sailors',         COUNT(*) FROM marineros.sailors
+UNION ALL SELECT 'marineros.boats',           COUNT(*) FROM marineros.boats
+UNION ALL SELECT 'marineros.reserves',        COUNT(*) FROM marineros.reserves
+--------------
+
++---------------------------+-------+
+| tabla                     | filas |
++---------------------------+-------+
+| harrypotter.estudiantes   |     8 |
+| harrypotter.profesores    |     6 |
+| harrypotter.cursos        |     5 |
+| harrypotter.inscripciones |    16 |
+| marineros.sailors         |    10 |
+| marineros.boats           |     4 |
+| marineros.reserves        |    11 |
++---------------------------+-------+
