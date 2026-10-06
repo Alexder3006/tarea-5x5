@@ -1,0 +1,21 @@
+# 02_marineros  |  YugabyteDB Aeon  |  2026-10-06T10:22:49  |  8.1s  |  codigo 0
+psql:C:/BaseDeDatos/tarea-5x5/postgres/02_marineros.sql:15: NOTICE:  database "marineros" does not exist, skipping
+  tabla   | filas 
+----------+-------
+ sailors  |    10
+ boats    |     4
+ reserves |    11
+(3 filas)
+
+  sname  
+---------
+ Dustin
+ Horatio
+ Lubber
+(3 filas)
+
+ sname  
+--------
+ Dustin
+(1 fila)
+

@@ -1,0 +1,17 @@
+# 04_chinook  |  YugabyteDB Aeon  |  2026-10-06T10:23:34  |  27.2s  |  codigo 0
+psql:C:/BaseDeDatos/tarea-5x5/postgres/04_chinook.sql:35: NOTICE:  database "chinook" does not exist, skipping
+     tabla      | filas 
+----------------+-------
+ album          |   347
+ artist         |   275
+ customer       |    59
+ employee       |     8
+ genre          |    25
+ invoice        |   412
+ invoice_line   |  2240
+ media_type     |     5
+ playlist       |    18
+ playlist_track |  8715
+ track          |  3503
+(11 filas)
+

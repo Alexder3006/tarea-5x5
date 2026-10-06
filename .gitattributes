@@ -1,0 +1,6 @@
+# Fin de línea LF en el repo: los .sh deben correr en Linux (Codespace).
+*.sh   text eol=lf
+*.sql  text eol=lf
+*.py   text eol=lf
+*.md   text eol=lf
+*.ps1  text eol=crlf

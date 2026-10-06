@@ -1,0 +1,42 @@
+# pruebas_restricciones_postgres  |  PostgreSQL 18 (Docker, prueba)  |  2026-10-06T03:39:34  |  0.2s  |  codigo 0
+--- harrypotter ---
+psql:/tmp/script.sql:13: ERROR:  new row for relation "estudiantes" violates check constraint "ck_estudiantes_casa"
+DETAIL:  Failing row contains (99, Ginny Weasley, Grifindor).
+psql:/tmp/script.sql:15: ERROR:  new row for relation "inscripciones" violates check constraint "ck_inscripciones_nota"
+DETAIL:  Failing row contains (1, 103, Z).
+psql:/tmp/script.sql:17: ERROR:  duplicate key value violates unique constraint "inscripciones_pkey"
+DETAIL:  Key (estudiante_id, curso_id)=(1, 101) already exists.
+psql:/tmp/script.sql:19: ERROR:  insert or update on table "cursos" violates foreign key constraint "fk_cursos_profesor"
+DETAIL:  Key (profesor_id)=(99) is not present in table "profesores".
+psql:/tmp/script.sql:21: ERROR:  duplicate key value violates unique constraint "profesores_nombre_key"
+DETAIL:  Key (nombre)=(Severus Snape) already exists.
+psql:/tmp/script.sql:23: ERROR:  update or delete on table "profesores" violates foreign key constraint "fk_cursos_profesor" on table "cursos"
+DETAIL:  Key (profesor_id)=(1) is still referenced from table "cursos".
+psql:/tmp/script.sql:25: ERROR:  null value in column "profesor_id" of relation "cursos" violates not-null constraint
+DETAIL:  Failing row contains (198, Muggle Studies, null).
+     tabla     | filas 
+---------------+-------
+ estudiantes   |     8
+ profesores    |     6
+ cursos        |     5
+ inscripciones |    16
+(4 rows)
+
+--- marineros ---
+psql:/tmp/script.sql:36: ERROR:  new row for relation "sailors" violates check constraint "ck_sailors_rating"
+DETAIL:  Failing row contains (99, Popeye, 11, 40.0).
+psql:/tmp/script.sql:38: ERROR:  new row for relation "sailors" violates check constraint "ck_sailors_age"
+DETAIL:  Failing row contains (98, Bluto, 5, -3.0).
+psql:/tmp/script.sql:40: ERROR:  duplicate key value violates unique constraint "reserves_pkey"
+DETAIL:  Key (sid, bid, day)=(22, 101, 2023-07-10) already exists.
+psql:/tmp/script.sql:42: ERROR:  insert or update on table "reserves" violates foreign key constraint "fk_reserves_sailor"
+DETAIL:  Key (sid)=(99) is not present in table "sailors".
+psql:/tmp/script.sql:44: ERROR:  insert or update on table "reserves" violates foreign key constraint "fk_reserves_boat"
+DETAIL:  Key (bid)=(999) is not present in table "boats".
+  tabla   | filas 
+----------+-------
+ sailors  |    10
+ boats    |     4
+ reserves |    11
+(3 rows)
+

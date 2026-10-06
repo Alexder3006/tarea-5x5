@@ -1,0 +1,20 @@
+# 03_northwind  |  YugabyteDB Aeon  |  2026-10-06T10:23:07  |  17.2s  |  codigo 0
+psql:C:/BaseDeDatos/tarea-5x5/postgres/03_northwind.sql:15: NOTICE:  database "northwind" does not exist, skipping
+         tabla          | filas 
+------------------------+-------
+ categories             |     8
+ customer_customer_demo |     0
+ customer_demographics  |     0
+ customers              |    91
+ employee_territories   |    49
+ employees              |     9
+ order_details          |  2155
+ orders                 |   830
+ products               |    77
+ region                 |     4
+ shippers               |     6
+ suppliers              |    29
+ territories            |    53
+ us_states              |    51
+(14 filas)
+

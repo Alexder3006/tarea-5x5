@@ -1,0 +1,35 @@
+# 01_harrypotter  |  YugabyteDB Aeon  |  2026-10-06T10:22:41  |  8.1s  |  codigo 0
+psql:C:/BaseDeDatos/tarea-5x5/postgres/01_harrypotter.sql:16: NOTICE:  database "harrypotter" does not exist, skipping
+     tabla     | filas 
+---------------+-------
+ estudiantes   |     8
+ profesores    |     6
+ cursos        |     5
+ inscripciones |    16
+(4 filas)
+
+     estudiante     |    casa    |             curso             |      profesor      | nota 
+--------------------+------------+-------------------------------+--------------------+------
+ Harry Potter       | Gryffindor | Potions                       | Severus Snape      | A
+ Harry Potter       | Gryffindor | Defense Against the Dark Arts | Remus Lupin        | E
+ Hermione Granger   | Gryffindor | Potions                       | Severus Snape      | O
+ Hermione Granger   | Gryffindor | Herbology                     | Pomona Sprout      | O
+ Hermione Granger   | Gryffindor | Transfiguration               | Minerva McGonagall | O
+ Draco Malfoy       | Slytherin  | Potions                       | Severus Snape      | E
+ Draco Malfoy       | Slytherin  | Defense Against the Dark Arts | Remus Lupin        | A
+ Draco Malfoy       | Slytherin  | Transfiguration               | Minerva McGonagall | E
+ Ron Weasley        | Gryffindor | Potions                       | Severus Snape      | P
+ Ron Weasley        | Gryffindor | Transfiguration               | Minerva McGonagall | A
+ Luna Lovegood      | Ravenclaw  | Herbology                     | Pomona Sprout      | E
+ Luna Lovegood      | Ravenclaw  | Charms                        | Filius Flitwick    | 
+ Cedric Diggory     | Hufflepuff | Herbology                     | Pomona Sprout      | O
+ Neville Longbottom | Gryffindor | Potions                       | Severus Snape      | T
+ Neville Longbottom | Gryffindor | Herbology                     | Pomona Sprout      | O
+ Cho Chang          | Ravenclaw  | Charms                        | Filius Flitwick    | E
+(16 filas)
+
+ profesor_sin_curso 
+--------------------
+ Sybill Trelawney
+(1 fila)
+

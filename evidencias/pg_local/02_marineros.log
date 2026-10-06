@@ -1,0 +1,21 @@
+# 02_marineros  |  PostgreSQL local  |  2026-10-06T08:59:41  |  1s  |  codigo 0
+psql:C:/BaseDeDatos/tarea-5x5/postgres/02_marineros.sql:15: NOTICE:  no existe la base de datos «marineros», omitiendo
+  tabla   | filas 
+----------+-------
+ sailors  |    10
+ boats    |     4
+ reserves |    11
+(3 filas)
+
+  sname  
+---------
+ Dustin
+ Horatio
+ Lubber
+(3 filas)
+
+ sname  
+--------
+ Dustin
+(1 fila)
+

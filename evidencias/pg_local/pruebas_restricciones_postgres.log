@@ -1,0 +1,42 @@
+# pruebas_restricciones_postgres  |  PostgreSQL local  |  2026-10-06T08:59:47  |  1s  |  codigo 0
+psql:C:/BaseDeDatos/tarea-5x5/verificacion/pruebas_restricciones_postgres.sql:13: ERROR:  el nuevo registro para la relación «estudiantes» viola la restricción «check» «ck_estudiantes_casa»
+DETALLE:  La fila que falla contiene (99, Ginny Weasley, Grifindor).
+psql:C:/BaseDeDatos/tarea-5x5/verificacion/pruebas_restricciones_postgres.sql:15: ERROR:  el nuevo registro para la relación «inscripciones» viola la restricción «check» «ck_inscripciones_nota»
+DETALLE:  La fila que falla contiene (1, 103, Z).
+psql:C:/BaseDeDatos/tarea-5x5/verificacion/pruebas_restricciones_postgres.sql:17: ERROR:  llave duplicada viola restricción de unicidad «inscripciones_pkey»
+DETALLE:  Ya existe la llave (estudiante_id, curso_id)=(1, 101).
+psql:C:/BaseDeDatos/tarea-5x5/verificacion/pruebas_restricciones_postgres.sql:19: ERROR:  inserción o actualización en la tabla «cursos» viola la llave foránea «fk_cursos_profesor»
+DETALLE:  La llave (profesor_id)=(99) no está presente en la tabla «profesores».
+psql:C:/BaseDeDatos/tarea-5x5/verificacion/pruebas_restricciones_postgres.sql:21: ERROR:  llave duplicada viola restricción de unicidad «profesores_nombre_key»
+DETALLE:  Ya existe la llave (nombre)=(Severus Snape).
+psql:C:/BaseDeDatos/tarea-5x5/verificacion/pruebas_restricciones_postgres.sql:23: ERROR:  update o delete en «profesores» viola la llave foránea «fk_cursos_profesor» en la tabla «cursos»
+DETALLE:  La llave (profesor_id)=(1) todavía es referida desde la tabla «cursos».
+psql:C:/BaseDeDatos/tarea-5x5/verificacion/pruebas_restricciones_postgres.sql:25: ERROR:  el valor nulo en la columna «profesor_id» de la relación «cursos» viola la restricción “not-null”
+DETALLE:  La fila que falla contiene (198, Muggle Studies, null).
+psql:C:/BaseDeDatos/tarea-5x5/verificacion/pruebas_restricciones_postgres.sql:36: ERROR:  el nuevo registro para la relación «sailors» viola la restricción «check» «ck_sailors_rating»
+DETALLE:  La fila que falla contiene (99, Popeye, 11, 40.0).
+psql:C:/BaseDeDatos/tarea-5x5/verificacion/pruebas_restricciones_postgres.sql:38: ERROR:  el nuevo registro para la relación «sailors» viola la restricción «check» «ck_sailors_age»
+DETALLE:  La fila que falla contiene (98, Bluto, 5, -3.0).
+psql:C:/BaseDeDatos/tarea-5x5/verificacion/pruebas_restricciones_postgres.sql:40: ERROR:  llave duplicada viola restricción de unicidad «reserves_pkey»
+DETALLE:  Ya existe la llave (sid, bid, day)=(22, 101, 2023-07-10).
+psql:C:/BaseDeDatos/tarea-5x5/verificacion/pruebas_restricciones_postgres.sql:42: ERROR:  inserción o actualización en la tabla «reserves» viola la llave foránea «fk_reserves_sailor»
+DETALLE:  La llave (sid)=(99) no está presente en la tabla «sailors».
+psql:C:/BaseDeDatos/tarea-5x5/verificacion/pruebas_restricciones_postgres.sql:44: ERROR:  inserción o actualización en la tabla «reserves» viola la llave foránea «fk_reserves_boat»
+DETALLE:  La llave (bid)=(999) no está presente en la tabla «boats».
+--- harrypotter ---
+     tabla     | filas 
+---------------+-------
+ estudiantes   |     8
+ profesores    |     6
+ cursos        |     5
+ inscripciones |    16
+(4 filas)
+
+--- marineros ---
+  tabla   | filas 
+----------+-------
+ sailors  |    10
+ boats    |     4
+ reserves |    11
+(3 filas)
+

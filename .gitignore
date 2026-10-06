@@ -1,0 +1,7 @@
+# Contraseñas de los contenedores: nunca al repositorio.
+.env
+.env.*
+# Certificado de Aeon: no es secreto, pero es de tu clúster y no hace falta en el repo.
+*.crt
+# Cachés de Python
+__pycache__/

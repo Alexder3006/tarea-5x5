@@ -1,0 +1,17 @@
+# 04_chinook  |  MySQL local  |  2026-10-06T07:53:27  |  2s  |  codigo 0
++---------------+-------+
+| tabla         | filas |
++---------------+-------+
+| Album         |   347 |
+| Artist        |   275 |
+| Customer      |    59 |
+| Employee      |     8 |
+| Genre         |    25 |
+| Invoice       |   412 |
+| InvoiceLine   |  2240 |
+| MediaType     |     5 |
+| Playlist      |    18 |
+| PlaylistTrack |  8715 |
+| Track         |  3503 |
++---------------+-------+
+mysql: [Warning] Using a password on the command line interface can be insecure.
